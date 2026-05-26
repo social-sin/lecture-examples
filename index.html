@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced HTML Examples</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <a href="#maincontent" class="skip-link">
+    Skip to main content
+  </a>
+
+  <header>
+    <h1>Advanced HTML Examples</h1>
+
+    <nav>
+      <ul>
+        <li><a href="#text-elements">Text Elements</a></li>
+        <li><a href="#paragraphs-breaks">Paragraphs & Line Breaks</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#images-videos">Images & Videos</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#semantics">Semantic HTML</a></li>
+        <li><a href="#tables">Tables</a></li>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#deprecated">Deprecated Tags</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="maincontent">
+
+    <!-- ========================================= -->
+    <!-- TEXT ELEMENTS -->
+    <!-- ========================================= -->
+
+    <section id="text-elements">
+      <h2>Text Elements in HTML</h2>
+
+      <article>
+        <h3>Semantic vs Presentational Tags</h3>
+
+        <div class="example-grid">
+
+          <div class="example-card">
+            <h4>Semantic Tags</h4>
+
+            <p>
+              You <em>really</em> need to read the instructions carefully.
+            </p>
+
+            <p>
+              <strong>Warning:</strong> This assignment closes tonight.
+            </p>
+          </div>
+
+          <div class="example-card">
+            <h4>Presentational Tags</h4>
+
+            <p>
+              The word <i>mise en place</i> is French.
+            </p>
+
+            <p>
+              The term <b>semantic HTML</b> is important vocabulary.
+            </p>
+          </div>
+
+        </div>
+      </article>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- PARAGRAPHS VS BR -->
+    <!-- ========================================= -->
+
+    <section id="paragraphs-breaks">
+      <h2>&lt;p&gt; vs &lt;br&gt;</h2>
+
+      <div class="example-grid">
+
+        <article class="example-card">
+          <h3>Paragraphs</h3>
+
+          <p>
+            This is the first paragraph of content.
+          </p>
+
+          <p>
+            This is the second paragraph. Notice the spacing between them.
+          </p>
+        </article>
+
+        <article class="example-card">
+          <h3>Line Breaks</h3>
+
+          <p>
+            123 Main Street<br>
+            Orlando, FL 32801<br>
+            United States
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- LISTS -->
+    <!-- ========================================= -->
+
+    <section id="lists">
+      <h2>Advanced HTML Lists</h2>
+
+      <div class="example-grid">
+
+        <article class="example-card">
+          <h3>Ordered List</h3>
+
+          <ol>
+            <li>Open VS Code</li>
+            <li>Create index.html</li>
+            <li>Write semantic HTML</li>
+          </ol>
+        </article>
+
+        <article class="example-card">
+          <h3>Nested List</h3>
+
+          <ul>
+            <li>
+              Frontend
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- IMAGES & VIDEOS -->
+    <!-- ========================================= -->
+
+    <section id="images-videos">
+      <h2>Advanced HTML Images & Videos</h2>
+
+      <figure>
+        <img
+          src="https://picsum.photos/800/400"
+          alt="Mountain landscape"
+          width="800"
+          height="400"
+        >
+
+        <figcaption>
+          Semantic image example using figure and figcaption.
+        </figcaption>
+      </figure>
+
+      <video controls width="800">
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- LINKS -->
+    <!-- ========================================= -->
+
+    <section id="links">
+      <h2>Advanced HTML Links</h2>
+
+      <div class="example-grid">
+
+        <article class="example-card">
+          <h3>External Link</h3>
+
+          <a
+            href="https://developer.mozilla.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit MDN Web Docs
+          </a>
+        </article>
+
+        <article class="example-card">
+          <h3>Accessible Link</h3>
+
+          <a href="#tables" aria-label="Jump to the tables section">
+            Jump to Tables Section
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- SEMANTIC HTML -->
+    <!-- ========================================= -->
+
+    <section id="semantics">
+      <h2>Advanced HTML Semantics</h2>
+
+      <div class="semantic-layout">
+        <header>header</header>
+        <nav>nav</nav>
+        <main>main</main>
+        <aside>aside</aside>
+        <footer>footer</footer>
+      </div>
+
+      <article>
+        <h3>Highlighted Text & Time</h3>
+
+        <p>
+          <mark>Important:</mark> Midterm project submissions close Friday.
+        </p>
+
+        <p>
+          Class starts on
+          <time datetime="2026-09-14T09:00">
+            September 14, 2026 at 9:00 AM
+          </time>
+        </p>
+      </article>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- TABLES -->
+    <!-- ========================================= -->
+
+    <section id="tables">
+      <h2>Advanced HTML Tables</h2>
+
+      <table>
+
+        <caption>
+          Monthly Sales Data
+        </caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Month</th>
+            <th scope="col">Sales</th>
+            <th scope="col">Change</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>January</td>
+            <td>$5,000</td>
+            <td>+5%</td>
+          </tr>
+
+          <tr>
+            <td>February</td>
+            <td>$4,800</td>
+            <td>-4%</td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td>Total</td>
+            <td>$9,800</td>
+            <td>+1%</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- FORMS -->
+    <!-- ========================================= -->
+
+    <section id="forms">
+      <h2>Advanced HTML Forms & Input Semantics</h2>
+
+      <form action="/submit" method="post">
+
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="bio">Short Bio:</label>
+          <textarea id="bio" name="bio" rows="4"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferred Class Format</legend>
+
+          <input type="radio" id="online" name="format" value="online">
+          <label for="online">Online</label>
+
+          <br>
+
+          <input type="radio" id="inperson" name="format" value="inperson">
+          <label for="inperson">In Person</label>
+        </fieldset>
+
+        <button type="submit">
+          Submit Form
+        </button>
+
+      </form>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- DEPRECATED TAGS -->
+    <!-- ========================================= -->
+
+    <section id="deprecated">
+      <h2>Deprecated HTML Tags</h2>
+
+      <div class="example-grid">
+
+        <article class="example-card">
+          <h3>&lt;center&gt;</h3>
+
+          <center>
+            Deprecated center tag example
+          </center>
+        </article>
+
+        <article class="example-card">
+          <h3>&lt;font&gt;</h3>
+
+          <font color="red" size="5">
+            Deprecated font tag example
+          </font>
+        </article>
+
+        <article class="example-card">
+          <h3>&lt;marquee&gt;</h3>
+
+          <marquee>
+            Deprecated scrolling text example
+          </marquee>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      Advanced HTML Lecture Demo File
+    </p>
+  </footer>
+
+</body>
+</html>
